@@ -77,6 +77,11 @@ input[type=password] {
     color: #ECF0F5;
 }
 
+.valid-error {
+    font-size: small;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .form-control-label {
     font-size: 10px;
     color: #6C6C6C;
