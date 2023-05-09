@@ -71,8 +71,8 @@ namespace InvoiceTrack.Infrastructure.Context
                 {
                     Id = "2",
                     UserName = Guid.NewGuid().ToString(),
-                    Email = "fathima.as@experionglobal.com",
-                    NormalizedEmail = "FATHIMA.AS@EXPERIONGLOBAL.COM"
+                    Email = "arjun.asok@experionglobal.com",
+                    NormalizedEmail = "ARJUN.ASOK@EXPERIONGLOBAL.COM"
                     //PasswordHash = hasher.HashPassword(null, password)
                 }
             );

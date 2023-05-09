@@ -5,6 +5,7 @@ import { SuperadminRoutingModule } from './superadmin-routing.module';
 import { SuperadminLayoutComponent } from './superadmin-layout/superadmin-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MenubarComponent } from './menubar/menubar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { MenubarComponent } from './menubar/menubar.component';
   ],
   imports: [
     CommonModule,
-    SuperadminRoutingModule
+    SuperadminRoutingModule,
+    FontAwesomeModule
   ]
 })
 export class SuperadminModule { }
