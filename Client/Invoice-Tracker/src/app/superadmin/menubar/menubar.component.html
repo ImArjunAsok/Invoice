@@ -1,26 +1,30 @@
 <nav class="navbar">
-    <div class="logo">
-      <img src="../../../assets/images/logo.png" alt="Experion Logo">
-    </div>
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="#" class="nav-item">Home</a></li>
-        <li class="dropdown">
-          <a href="#" class="nav-item">User <i class="fas fa-angle-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#" class="dropdown-item">BU Heads</a></li>
-            <li><a href="#" class="dropdown-item">Project Manager</a></li>
-            <li><a href="#" class="dropdown-item">Super Admin</a></li>
-          </ul>
-        </li>
-        <li><a href="#" class="nav-item">Projects</a></li>
-        <li><a href="#" class="nav-item">Reports</a></li>
-        <li>
-          <div class="profile-dropdown" (click)="profileDropdown()">
-            <div class="circle">
-              <img id="display-picture" src="../../../assets/images/bg-login.jpg" alt="Profile Picture">
-            </div>
-            <div class="d-none dropdown-content">
+  <div class="logo">
+    <img src="../../../assets/images/logo.png" alt="Experion Logo">
+  </div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#" class="nav-item">Home</a></li>
+      <li class="dropdown">
+        <a class="nav-item" (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
+          User <fa-icon [icon]="isHovered ? arrowUp : arrowDown"></fa-icon>
+        </a>
+        <ul class="dropdown-menu" (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
+          <li><a href="#" class="dropdown-item">BU Heads</a></li>
+          <li><a href="#" class="dropdown-item">Project Manager</a></li>
+          <li><a href="#" class="dropdown-item">Super Admin</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="nav-item">Projects</a></li>
+      <li><a href="#" class="nav-item">Reports</a></li>
+      <li>
+        <div class="profile-dropdown" (click)="profileDropdown()">
+          <div class="circle">
+            <div class="avatar">{{initials}}</div>
+          </div>
+          <div class="d-none dropdown-content">
+            <div class="d-flex justify-content-around">
+              <div class="avatar enlarged-avatar d-flex justify-content-center align-items-center">{{initials}}</div>
               <div class="profile-info d-flex flex-column align-items-center">
                 <h4>Hi, {{name}}</h4>
                 <p>{{role}}</p>
@@ -34,7 +38,8 @@
               </div>
             </div>
           </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

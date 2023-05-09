@@ -12,8 +12,8 @@ nav {
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
-    padding: 15px;
-    background-color: #333;
+    padding: 8px;
+    background-color: #000000;
     color: #fff;
     font-size: 18px;
     box-shadow: 2px 2px 3px rgb(70, 70, 70);
@@ -114,7 +114,7 @@ nav .logo img {
     font-size: 13px;
     letter-spacing: 1px;
     color: #212121;
-    background-color: #fcfaff;
+    background-color: #fdfdfd;
     border: none;
     border-radius: 3px;
     box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
@@ -142,6 +142,15 @@ nav .dropdown-item:hover,
     width: 100%;
 }
 
+.fa-arrow-down {
+    transition: transform 0.3s;
+  }
+  
+.fa-arrow-up {
+    transition: transform 0.3s;
+    transform: rotate(180deg);
+  }
+
 .profile-dropdown {
     position: relative;
     display: inline-block;
@@ -158,7 +167,7 @@ nav .dropdown-item:hover,
     font-size: 13px;
     letter-spacing: 1px;
     color: #212121;
-    background-color: #fcfaff;
+    background-color: #ffffff;
     border: none;
     border-radius: 3px;
     box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
@@ -170,21 +179,37 @@ nav .dropdown-item:hover,
 }
 
 .circle {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
 }
 
-#display-picture {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.avatar {
+    width: 36px;
+    height: 36px;
+    background-color: #e8ecf1;
+    border-radius: 50%;
+    color: #4b5c72;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 38px;
+}
+
+.enlarged-avatar {
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.profile-info {
+    margin-top: 10px;
 }
 
 .profile-info h4 {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -195,22 +220,23 @@ nav .dropdown-item:hover,
 
 .navigation {
     width: 100%;
-    background-color: #fcfaff;
+    background-color: #ffffff;
 }
 
 .button img {
     width: 25px;
     float: left;
+    margin-right: 20px;
 }
 
 .logout {
     font-size: 0.8em;
     font-family: 'Poppins', sans-serif;
     position: relative;
-    right: 0px;
+    right: 15px;
     bottom: -4px;
     overflow: hidden;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     opacity: 0;
     transition: opacity .85s;
     -webkit-transition: opacity .85s;
@@ -220,10 +246,10 @@ nav .dropdown-item:hover,
 .button {
     text-decoration: none;
     float: right;
-    margin: 10px;
+    margin: 15px;
     color: rgb(0, 0, 0);
     width: 25px;
-    background-color: #fcfaff;
+    background-color: #ffffff;
     transition: width .55s;
     -webkit-transition: width .55s;
     overflow: hidden;
