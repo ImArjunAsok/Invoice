@@ -18,15 +18,15 @@
       <li><a href="#" class="nav-item">Projects</a></li>
       <li><a href="#" class="nav-item">Reports</a></li>
       <li>
-        <div class="profile-dropdown" (click)="profileDropdown()">
-          <div class="circle">
+        <div class="profile-dropdown">
+          <div class="circle" (click)="profileDropdown()">
             <div class="avatar">{{initials}}</div>
           </div>
-          <div class="d-none dropdown-content">
-            <div class="d-flex justify-content-around">
+          <div class="d-none dropdown-content d-flex flex-column justify-content-center align-items-center">
+            <!-- <div class="d-flex justify-content-around">
               <div class="avatar enlarged-avatar d-flex justify-content-center align-items-center">{{initials}}</div>
               <div class="profile-info d-flex flex-column align-items-center">
-                <h4>Hi, {{name}}</h4>
+                <h4>{{name}}</h4>
                 <p>{{role}}</p>
                 <p>{{email}}</p>
                 <div class="navigation">
@@ -36,6 +36,20 @@
                   </a>
                 </div>
               </div>
+            </div> -->
+            <div class="profile d-flex">
+              <div class="avatar enlarged-avatar d-flex justify-content-center align-items-center">{{initials}}</div>
+              <div class="profile-info d-flex flex-column justify-content-center">
+                <div class="user-name">{{name}}</div>
+                <div class="user-email">{{email}}</div>
+              </div>
+            </div>
+            <hr>
+            <div>
+              <a class="button d-flex" href="">
+                <fa-icon [icon]="logOut"></fa-icon>
+                <div class="sign-out">Sign out</div>
+              </a>
             </div>
           </div>
         </div>
