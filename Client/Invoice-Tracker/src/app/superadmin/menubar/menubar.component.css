@@ -227,6 +227,7 @@ hr { color: gray; width: 100%; }
 }
 .button {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .button fa-icon {
