@@ -7,10 +7,7 @@ const routes: Routes = [
   {
     path: '', component: SuperadminLayoutComponent, children: [
       { path: 'dashboard', component: DashboardComponent },
-      // { path: 'booking/:id', component: AppointmentBookingComponent },
-      // { path: 'appointment-history', component: AppointmentHistoryComponent},
-      // { path: 'profile', component: PatientProfileComponent},
-      // { path: 'appointment-details/:appointmentId/:doctorId', component: AppointmentDetailsComponent}
+      // { path: 'booking/:id', component: AppointmentBookingComponent }
     ]
   }
 ];
