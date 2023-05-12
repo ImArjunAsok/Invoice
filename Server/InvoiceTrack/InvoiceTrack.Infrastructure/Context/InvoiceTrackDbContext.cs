@@ -76,6 +76,16 @@ namespace InvoiceTrack.Infrastructure.Context
                     //PasswordHash = hasher.HashPassword(null, password)
                 }
             );
+            builder.Entity<ApplicationUser>().HasData(
+                new ApplicationUser
+                {
+                    Id = "3",
+                    UserName = Guid.NewGuid().ToString(),
+                    Email = "fathima.as@experionglobal.com",
+                    NormalizedEmail = "FATHIMA.AS@EXPERIONGLOBAL.COM"
+                    //PasswordHash = hasher.HashPassword(null, password)
+                }
+);
             builder.Entity<IdentityUserRole<string>>().HasData(
                  new IdentityUserRole<string>
                  {
@@ -89,6 +99,13 @@ namespace InvoiceTrack.Infrastructure.Context
                      RoleId = "2",
                      UserId = "2"
                  }
+            );
+            builder.Entity<IdentityUserRole<string>>().HasData(
+                new IdentityUserRole<string>
+                {
+                    RoleId = "3",
+                    UserId = "3"
+                }
             );
         }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }

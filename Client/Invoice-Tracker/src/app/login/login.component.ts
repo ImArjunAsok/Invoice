@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
           this.router.navigateByUrl('/buhead');
         }
         else if (role == "ProjectManager") {
-          this.router.navigateByUrl('/projectmanager')
+          this.router.navigateByUrl('/projectmanager/home')
         }
         else {
           Swal.fire(
