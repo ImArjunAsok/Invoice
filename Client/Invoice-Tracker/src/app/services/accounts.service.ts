@@ -30,7 +30,11 @@ export class AccountsService {
     res.subscribe({
       next: (res: any) => {
         if (res.isValid)
-          this.tokenHandler.setToken(res.result);
+         { this.tokenHandler.setToken(res.result);
+
+          debugger;
+         }
+         
         else
           this.tokenHandler.removeToken();
       }

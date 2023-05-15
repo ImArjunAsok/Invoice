@@ -1,0 +1,50 @@
+
+<nav class="navbar">
+    <div class="logo">
+      <img src="../../../assets/images/logo.png" alt="Experion Logo">
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#" class="nav-item">Home</a></li>
+        
+        <li><a href="#" class="nav-item">Reports</a></li>
+        <li>
+          <div class="profile-dropdown">
+            <div class="circle" (click)="profileDropdown()">
+              <div class="avatar">{{initials}}</div>
+            </div>
+            <div class="d-none dropdown-content d-flex flex-column justify-content-center align-items-center">
+              <!-- <div class="d-flex justify-content-around">
+                <div class="avatar enlarged-avatar d-flex justify-content-center align-items-center">{{initials}}</div>
+                <div class="profile-info d-flex flex-column align-items-center">
+                  <h4>{{name}}</h4>
+                  <p>{{role}}</p>
+                  <p>{{email}}</p>
+                  <div class="navigation">
+                    <a class="button" href="">
+                      <img src="../../../assets/images/logout.png">
+                      <div class="logout">LOGOUT</div>
+                    </a>
+                  </div>
+                </div>
+              </div> -->
+              <div class="profile d-flex">
+                <div class="avatar enlarged-avatar d-flex justify-content-center align-items-center">{{initials}}</div>
+                <div class="profile-info d-flex flex-column justify-content-center">
+                  <div class="user-name">{{name}}</div>
+                  <div class="user-email">{{email}}</div>
+                </div>
+              </div>
+              <hr>
+              <div>
+                <a class="button d-flex">
+                  <fa-icon [icon]="logOut"></fa-icon>
+                  <div class="sign-out" (click)="handleLogOut()">Sign out</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>

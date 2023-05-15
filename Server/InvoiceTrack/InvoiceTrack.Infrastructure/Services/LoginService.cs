@@ -73,7 +73,7 @@ namespace InvoiceTrack.Infrastructure.Services
                 issuer: issuer,
                 claims: claims,
                 audience: audience,
-                expires: DateTime.UtcNow + TimeSpan.FromDays(1),
+                expires: DateTime.UtcNow + TimeSpan.FromDays(1), //
                 signingCredentials: credentials
                 );
             return new JwtSecurityTokenHandler().WriteToken(token);
