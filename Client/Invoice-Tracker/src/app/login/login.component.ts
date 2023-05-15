@@ -55,12 +55,14 @@ export class LoginComponent implements OnInit {
   handleMicrosoftLogin() {
     this.authService.loginPopup()
       .subscribe((response: AuthenticationResult) => {
+        
         console.log(response);
         this.model2.token = response.idToken.toString();
         this.model2.provider = "Microsoft";
         this.accountsService.microsoftLogin(this.model2).subscribe({
           next: (res: any) => {
             if (res.isValid)
+            debugger;
               var role = this.tokenHandler.getRoleFromToken();
             if (role == "SuperAdmin") {
               this.router.navigateByUrl('/superadmin/dashboard');
