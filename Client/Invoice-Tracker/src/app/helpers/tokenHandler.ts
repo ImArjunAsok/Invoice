@@ -35,7 +35,6 @@ export class TokenHandler {
     } 
     
     getRoleFromToken(): any {
-        debugger;
         const parsedToken = this.getDecodedToken();
         return parsedToken.Role;
     }

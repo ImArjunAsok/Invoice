@@ -62,7 +62,6 @@ export class LoginComponent implements OnInit {
         this.accountsService.microsoftLogin(this.model2).subscribe({
           next: (res: any) => {
             if (res.isValid)
-            debugger;
               var role = this.tokenHandler.getRoleFromToken();
             if (role == "SuperAdmin") {
               this.router.navigateByUrl('/superadmin/dashboard');
